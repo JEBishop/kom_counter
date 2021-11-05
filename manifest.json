@@ -1,0 +1,21 @@
+{
+
+    "manifest_version": 2,
+    "name": "kom_counter",
+    "version": "0.1",
+  
+    "description": "Adds a count of athlete's KOMs/CRs to the KOM/CR page",
+  
+    "icons": {
+      "48": "icons/border-48.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://*.strava.com/athletes/*/segments/leader*"],
+        "js": ["kom_counter.js"]
+      }
+    ]
+  
+  }
+  
