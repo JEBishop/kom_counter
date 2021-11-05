@@ -1,4 +1,7 @@
-/* This is called on the https://www.strava.com/athletes/<<athlete number>>/segments/leader page */
+/* 
+    This is called on the https://www.strava.com/athletes/<<athlete number>>/segments/leader page 
+    Adds an incrementing counter to the KOM segment list, to easier keep track of an athlete's KOMs
+*/
 var th = document.createElement('th');
 th.innerHTML = "#";
 document.getElementsByClassName("my-segments")[0].getElementsByTagName("thead")[0].getElementsByTagName("tr")[0].prepend(th);
@@ -13,6 +16,7 @@ for(let ul of uls) {
     }
 
 }
+
 var rows = document.getElementsByClassName("my-segments")[0].getElementsByTagName("tbody")[0].getElementsByTagName("tr");
 for (let row of rows) {
     var td = document.createElement("td");
